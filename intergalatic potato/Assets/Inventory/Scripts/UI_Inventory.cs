@@ -10,16 +10,16 @@ public class UI_Inventory : MonoBehaviour {
     private Inventory inventory;
     private Transform itemSlotContainer;
     private Transform itemSlotTemplate;
-    private Player player;
+    //private player player;
 
     private void Awake() {
         itemSlotContainer = transform.Find("itemSlotContainer");
         itemSlotTemplate = itemSlotContainer.Find("itemSlotTemplate");
     }
 
-    public void SetPlayer() {
-        this.player = player;
-    }
+    //public void SetPlayer() {
+       // this.player = player;
+   // }
 
     public void SetInventory(Inventory inventory) {
         this.inventory = inventory;
@@ -54,7 +54,7 @@ public class UI_Inventory : MonoBehaviour {
                 // Drop item
                 Item duplicateItem = new Item { itemType = item.itemType, amount = item.amount };
                 inventory.RemoveItem(item);
-                ItemWorld.DropItem(player.GetPosition(), duplicateItem);
+              //  ItemWorld.DropItem(player.GetPosition(), duplicateItem);
             };
 
             itemSlotRectTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, -y * itemSlotCellSize);

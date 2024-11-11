@@ -16,12 +16,12 @@ public class ItemWorld : MonoBehaviour {
         return itemWorld;
     }
 
-    public static ItemWorld DropItem(Vector3 dropPosition, Item item) {
-        Vector3 randomDir = UtilsClass.GetRandomDir();
-        ItemWorld itemWorld = SpawnItemWorld(dropPosition + randomDir * 8f, item);
-        itemWorld.GetComponent<Rigidbody2D>().AddForce(randomDir * 40f, ForceMode2D.Impulse);
-        return itemWorld;
-    }
+    //public static ItemWorld DropItem(Vector3 dropPosition, Item item) {
+        //Vector3 randomDir = UtilsClass.GetRandomDir();
+       // ItemWorld itemWorld = SpawnItemWorld(dropPosition + randomDir * 8f, item);
+        //itemWorld.GetComponent<Rigidbody2D>().AddForce(randomDir * 40f, ForceMode2D.Impulse);
+        //return itemWorld;
+    //}
 
 
     private Item item;
