@@ -1,4 +1,4 @@
-using InventorySystem;
+//using InventorySystem;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -19,8 +19,8 @@ public class ChestScript : MonoBehaviour
         if (collision.tag.Equals("Player") && opened != 1)
         {
             
-            InventoryController.instance.AddItem("Inventory", "Potato Tornado handle");
-            opened = 1;
+            //InventoryController.instance.AddItem("Inventory", "Potato Tornado handle");
+            //opened = 1;
         }
     }
 
