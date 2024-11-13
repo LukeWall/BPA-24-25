@@ -8,6 +8,11 @@ TagManager:
   - weapon
   - Slot
   - Item
+  - Part1
+  - Part2
+  - Part3
+  - Part4
+  - craft
   layers:
   - Default
   - TransparentFX
