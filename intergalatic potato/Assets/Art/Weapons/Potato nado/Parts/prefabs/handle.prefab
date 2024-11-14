@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3183026326672269660}
   - component: {fileID: 8551572649693141065}
   - component: {fileID: -4430903014681920460}
-  - component: {fileID: 6428081166255193257}
+  - component: {fileID: 6888945159538552040}
   m_Layer: 0
   m_Name: handle
   m_TagString: Part1
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963fda4b9a16da64e9c81773c0723e89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slot: {fileID: 0}
   itemIcon: {fileID: 6615800060691972754, guid: 0365b6fe83595bc4cba65f9fbb448cbd, type: 3}
 --- !u!58 &-4430903014681920460
 CircleCollider2D:
@@ -132,11 +133,11 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.18136597}
   serializedVersion: 2
-  m_Radius: 2.06
---- !u!58 &6428081166255193257
-CircleCollider2D:
+  m_Radius: 1.1893005
+--- !u!61 &6888945159538552040
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -164,9 +165,19 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.76, y: 4.12}
+    newSize: {x: 0.76, y: 4.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 2.06
+  m_Size: {x: 0.86, y: 1.84}
+  m_EdgeRadius: 0

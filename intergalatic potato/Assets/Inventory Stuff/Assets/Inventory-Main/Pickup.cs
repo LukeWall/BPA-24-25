@@ -5,37 +5,41 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
+    public Slot slot;
     private Inventorymain inventory;
     public GameObject itemIcon;
-    public int craft = 1;
-    public GameObject crafted;
+    
     void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventorymain>();
+        //slot = GameObject.FindGameObjectWithTag("slot").GetComponent<Slot>();
     }
     private void Update()
     {
-        
+      
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            for (int i = 0;i<inventory.slots.Length; i++)
-            {
-                if (inventory.isFull[i] == false)
-                {
+            //for (int i = 0;i<inventory.slots.Length; i++)
+            //{
+            //    if (inventory.isFull[i] == false)
+            //    {
                     //Item can be added to inventory
-                    inventory.isFull[i] = true;
-                    Instantiate(itemIcon, inventory.slots[i].transform, false);
+
+                    Instantiate(itemIcon, inventory.slots[inventory.slotAvailable].transform, false);
                     Destroy(gameObject);
-                    inventory.isFull[i] = true;
+                    inventory.isFull[inventory.slotAvailable] = true;
+                    
+                   //break;
                 }
-                break;
+                
+                
             }
-        }
+    //    }
        
-    }
+    //}
     
 
 }
