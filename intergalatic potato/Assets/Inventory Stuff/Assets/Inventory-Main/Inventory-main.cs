@@ -10,4 +10,5 @@ public class Inventorymain : MonoBehaviour
     public GameObject[] slots = new GameObject[6];
     public int slotAvailable; 
    
+   
 }

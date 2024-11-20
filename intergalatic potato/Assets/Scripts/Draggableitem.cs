@@ -8,6 +8,7 @@ using UnityEngine.Rendering;
 public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler,
     IEndDragHandler
 {
+    DropPoint droppoint;
     private Vector3 _startingPosition;
     private Image _image;
     private Color _tempColor;
@@ -76,51 +77,12 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler,
          * on the Drop Point.  If _isDropped is true, we do
          * not want the object to return to starting position
         */
-        if (slot == 0)
+        if (!_isDropped)
         {
             ReturnToStartingPosition();
             _image.raycastTarget = true;
         }
-        if (slot == 1)
-        {
-            this.transform.position = slot1.position;
-        }
-        if (slot == 2)
-        {
-            this.transform.position = slot2.position;
-        }
-        if (slot == 3)
-        {
-            this.transform.position = slot3.position;
-        }
-        if (slot == 4)
-        {
-            this.transform.position = slot4.position;
-            
-        }
+    
     }
-        public void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("slot1"))
-        {
-            slot = 1;
-        }
-        else if (other.CompareTag("slot2"))
-        {
-            slot = 2;
-        }
-        else if (other.CompareTag("slot3"))
-        {
-            slot = 3;
-        }
-        else if (other.CompareTag("slot4"))
-        {
-            slot = 4;
-        }
-        else
-        {
-            slot = 0;
-        }
-
-    }
+       
 }

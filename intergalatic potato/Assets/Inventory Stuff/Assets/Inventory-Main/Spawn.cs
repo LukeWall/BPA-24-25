@@ -6,6 +6,7 @@ public class Spawn : MonoBehaviour
 {
     public GameObject item;
     private Transform player;
+
     // Start is called before the first frame update
     void Start()
     {

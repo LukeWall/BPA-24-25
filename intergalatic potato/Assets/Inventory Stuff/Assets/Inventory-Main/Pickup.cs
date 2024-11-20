@@ -6,6 +6,7 @@ using UnityEngine;
 public class Pickup : MonoBehaviour
 {
     public Slot slot;
+    
     private Inventorymain inventory;
     public GameObject itemIcon;
     
@@ -22,10 +23,10 @@ public class Pickup : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //for (int i = 0;i<inventory.slots.Length; i++)
-            //{
-            //    if (inventory.isFull[i] == false)
-            //    {
+            for (int i = 0; i < inventory.slots.Length; i++)
+            {
+                if (inventory.isFull[i] == false)
+                {
                     //Item can be added to inventory
 
                     Instantiate(itemIcon, inventory.slots[inventory.slotAvailable].transform, false);
@@ -37,9 +38,9 @@ public class Pickup : MonoBehaviour
                 
                 
             }
-    //    }
-       
-    //}
-    
+        }
+
+    }
+
 
 }
