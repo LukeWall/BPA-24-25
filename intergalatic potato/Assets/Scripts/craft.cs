@@ -34,7 +34,7 @@ public class craft : MonoBehaviour
             //three.SetActive(true);
             //four.SetActive(true);
             final.SetActive(true);
-            GameObject.Instantiate(finalItem , this.transform);
+           
         }
         else
         {

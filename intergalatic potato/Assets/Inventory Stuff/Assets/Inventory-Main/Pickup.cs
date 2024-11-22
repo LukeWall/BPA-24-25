@@ -23,19 +23,19 @@ public class Pickup : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            for (int i = 0; i < inventory.slots.Length; i++)
-            {
-                if (inventory.isFull[i] == false)
+            
+                if (!inventory.isFull)
                 {
                     //Item can be added to inventory
 
-                    Instantiate(itemIcon, inventory.slots[inventory.slotAvailable].transform, false);
+                    GameObject.Instantiate(itemIcon, inventory.slot.transform, false);
                     Destroy(gameObject);
-                    inventory.isFull[inventory.slotAvailable] = true;
+                    inventory.isFull =  true;
                     
                    //break;
                 }
-                
+
+               
                 
             }
         }
@@ -43,4 +43,4 @@ public class Pickup : MonoBehaviour
     }
 
 
-}
+

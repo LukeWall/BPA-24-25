@@ -6,9 +6,9 @@ using UnityEngine;
 public class Inventorymain : MonoBehaviour
 {
     
-    public bool[] isFull = new bool[6];
-    public GameObject[] slots = new GameObject[6];
-    public int slotAvailable; 
-   
+    public bool isFull = false;
+    public GameObject slot;
+    public int slotAvailable;
+    public GameObject[] items;
    
 }
