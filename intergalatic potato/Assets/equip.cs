@@ -9,7 +9,7 @@ public class equip : MonoBehaviour
     
     public GameObject weapon;
     public GameObject weaponIcon;
-    
+    public Transform weaponHolder;
     public GameObject player;
     Inventorymain inventory;
     public GameObject craftingUI;
@@ -30,17 +30,18 @@ public class equip : MonoBehaviour
     {
         if (!inventory.isFull)
         {
-            GameObject.Instantiate(weaponIcon, inventory.slot.transform, false);
+            Debug.Log("collected");
+            weaponIcon.SetActive(true);
             Destroy(gameObject);
             inventory.isFull = true;
-            GameObject.Destroy(craftingUI);
+            craftingUI.SetActive(false);
         }
     }
     public void equipWeapon()
     {
         Debug.Log("equip weapon");
-        Transform weaponHolder = player.transform.GetChild(0).transform;
-        if (weaponHolder.transform.childCount <1)
+       
+        if (weaponHolder.transform.childCount <2)
         {
             GameObject.Instantiate(weapon, weaponHolder,false);
         }
