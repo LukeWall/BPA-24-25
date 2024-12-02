@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class equip : MonoBehaviour
 {
@@ -35,6 +36,7 @@ public class equip : MonoBehaviour
             Destroy(gameObject);
             inventory.isFull = true;
             craftingUI.SetActive(false);
+            SceneManager.LoadScene(4, LoadSceneMode.Single);
         }
     }
     public void equipWeapon()
