@@ -17,6 +17,7 @@ TagManager:
   - slot2
   - slot3
   - slot4
+  - PlayerHand
   layers:
   - Default
   - TransparentFX

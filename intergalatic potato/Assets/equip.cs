@@ -18,14 +18,16 @@ public class equip : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
-        inventory = player.GetComponent<Inventorymain>();
+        weaponHolder = GameObject.FindGameObjectWithTag("PlayerHand").transform;
+        player = GameObject.FindGameObjectWithTag("Player").gameObject;
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventorymain>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player").gameObject;
+        weaponHolder = GameObject.FindGameObjectWithTag("PlayerHand").transform;
     }
     public void collect()
     {
@@ -36,7 +38,7 @@ public class equip : MonoBehaviour
             Destroy(gameObject);
             inventory.isFull = true;
             craftingUI.SetActive(false);
-            SceneManager.LoadScene(4, LoadSceneMode.Single);
+            
         }
     }
     public void equipWeapon()

@@ -6,22 +6,24 @@ using UnityEngine;
 
 public class ChestScript : MonoBehaviour
 {
-    int opened = 0;
+    
     public GameObject InteractBtn;
-    // Start is called before the first frame update
-    void Start()
-    {
-        opened = 0;
-    }
+    public GameObject openedChest;
+    public GameObject closedChest;
+    
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.tag.Equals("Player") && opened != 1)
+        if (other.tag.Equals("Player"))
         {
-            
-            //InventoryController.instance.AddItem("Inventory", "Potato Tornado handle");
-            //opened = 1;
+            InteractBtn.SetActive(true);
         }
     }
-
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag.Equals("Player"))
+        {
+            InteractBtn.SetActive(false);
+        }
+    }
 }
