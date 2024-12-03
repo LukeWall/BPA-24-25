@@ -33,12 +33,12 @@ public class equip : MonoBehaviour
     {
         if (!inventory.isFull)
         {
-            Debug.Log("collected");
+           
             weaponIcon.SetActive(true);
-            Destroy(gameObject);
+            inventory.parts = 0;
             inventory.isFull = true;
             craftingUI.SetActive(false);
-            
+            Debug.Log("collected");
         }
     }
     public void equipWeapon()

@@ -9,7 +9,13 @@ public class CameraScript : MonoBehaviour
     void Start()
     {
         var vcam = GetComponent<CinemachineVirtualCamera>();
+        GameObject.FindGameObjectWithTag("Player").transform.position = this.transform.position;
         vcam.Follow = GameObject.FindGameObjectWithTag("Player").transform;
     }
+    private void Update()
+    {
 
+    
+
+    }
 }

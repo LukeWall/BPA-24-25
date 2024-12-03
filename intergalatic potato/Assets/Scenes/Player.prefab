@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 4834688798483197212}
   - component: {fileID: 2463995897101079858}
   - component: {fileID: 3403953579123753736}
+  - component: {fileID: 8989321917763040060}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -35,7 +36,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 22.1, y: 6.23, z: 0}
-  m_LocalScale: {x: 12, y: 12, z: 12}
+  m_LocalScale: {x: 8, y: 8, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6506858491199854096}
@@ -159,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c78620c7525c65a419e297313d26988e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 8
+  _moveSpeed: 30
   animator: {fileID: 4948365823734065448}
 --- !u!50 &6722022127223259977
 Rigidbody2D:
@@ -222,9 +223,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFull: 0
-  slot: {fileID: 0}
+  slot: {fileID: 8209895853511201907, guid: 3bf17c561e2b1e64ba19b23c9e440586, type: 3}
   slotAvailable: 0
   items: []
+  parts: 0
+  craftingUI: {fileID: 8958067070627710463, guid: 7d75b1d8b7309b748a9025bb29b0a12a, type: 3}
 --- !u!61 &2463995897101079858
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -305,6 +308,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.16
+--- !u!114 &8989321917763040060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810508893463018714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b8c334667763af4d87072e7b4dcba51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7490608932543047594
 GameObject:
   m_ObjectHideFlags: 0

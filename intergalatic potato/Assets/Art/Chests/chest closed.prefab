@@ -102,6 +102,8 @@ MonoBehaviour:
   InteractBtn: {fileID: 5415026080529751512}
   openedChest: {fileID: 8240182128206314082, guid: de33a7905909fdf478518ac3e6a964bd, type: 3}
   closedChest: {fileID: 3818211684363038351}
+  text: {fileID: 0}
+  craftingUI: {fileID: 0}
 --- !u!61 &4341705900456549727
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -267,7 +269,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7912262094024558916}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -3379828147538382343}
+        m_TargetAssemblyTypeName: ChestScript, Assembly-CSharp
+        m_MethodName: BtnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8076849539977681394
 GameObject:
   m_ObjectHideFlags: 0
