@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class equip : MonoBehaviour
 {
@@ -17,24 +18,27 @@ public class equip : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
-        inventory = player.GetComponent<Inventorymain>();
+        weaponHolder = GameObject.FindGameObjectWithTag("PlayerHand").transform;
+        player = GameObject.FindGameObjectWithTag("Player").gameObject;
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventorymain>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player").gameObject;
+        weaponHolder = GameObject.FindGameObjectWithTag("PlayerHand").transform;
     }
     public void collect()
     {
         if (!inventory.isFull)
         {
-            Debug.Log("collected");
+           
             weaponIcon.SetActive(true);
-            Destroy(gameObject);
+            inventory.parts = 0;
             inventory.isFull = true;
             craftingUI.SetActive(false);
+            Debug.Log("collected");
         }
     }
     public void equipWeapon()
