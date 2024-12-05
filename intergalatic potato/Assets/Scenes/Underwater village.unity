@@ -8111,6 +8111,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6308415929818176605, guid: 1d943d8b0b4f55043b0b752d4f40c6ac, type: 3}
+      propertyPath: Aim
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6391593677285848908, guid: 1d943d8b0b4f55043b0b752d4f40c6ac, type: 3}
       propertyPath: m_LocalScale.x
       value: 8.080927
@@ -8162,7 +8166,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1810508893463018714, guid: 1d943d8b0b4f55043b0b752d4f40c6ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1929954979}
   m_SourcePrefab: {fileID: 100100000, guid: 1d943d8b0b4f55043b0b752d4f40c6ac, type: 3}
 --- !u!1 &953127964
 GameObject:
@@ -8714,6 +8721,26 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1929954968 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1810508893463018714, guid: 1d943d8b0b4f55043b0b752d4f40c6ac, type: 3}
+  m_PrefabInstance: {fileID: 510446935}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1929954979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929954968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3407ce70b76c3aa49ad0b4cd9fc4da9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  meleeSpeed: 15
+  damage: 5
 --- !u!1 &2106433247
 GameObject:
   m_ObjectHideFlags: 0
