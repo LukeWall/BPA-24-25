@@ -4,7 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - enemy
   - weapon
   - Slot
   - Item
@@ -18,6 +17,7 @@ TagManager:
   - slot3
   - slot4
   - PlayerHand
+  - Enemy
   layers:
   - Default
   - TransparentFX

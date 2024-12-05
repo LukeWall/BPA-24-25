@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D _rb;
     public Animator animator;
+    private Vector2 MostRecentlyMoved;
 
     public Transform Aim;
     bool isWalking = false;
@@ -37,8 +38,10 @@ public class PlayerController : MonoBehaviour
         if (isWalking)
         {
             Vector3 vector3 = Vector3.left * input.x + Vector3.down * input.y;
-            Aim.rotation = Quaternion.LookRotation(vector3.forward, vector3);
+            Aim.rotation = Quaternion.LookRotation(Vector3.forward, vector3);
         }
     }
+
+    
 
 }
