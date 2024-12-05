@@ -13,7 +13,7 @@ public class ChestScript : MonoBehaviour
     public GameObject text;
     public GameObject craftingUI;
     public Inventorymain inventory;
-   
+    public GameObject mimic;
     public void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventorymain>();
@@ -39,5 +39,9 @@ public class ChestScript : MonoBehaviour
         Instantiate(openedChest, this.transform);
         Destroy(this.gameObject);
         Destroy(InteractBtn);
+    }
+    public void activateMimic()
+    {
+        mimic.SetActive(true);
     }
 }

@@ -15,7 +15,7 @@ public class CameraScript : MonoBehaviour
     private void Update()
     {
 
-    
+        vcam.Follow = GameObject.FindGameObjectWithTag("Player").transform;
 
     }
 }

@@ -12,7 +12,9 @@ public class Inventorymain : MonoBehaviour
     public GameObject[] items;
     public int parts;
     public GameObject craftingUI;
+    public GameObject spawn;
     
+    public GameObject[] spawns;
     public void Start()
     {
         
@@ -24,6 +26,10 @@ public class Inventorymain : MonoBehaviour
             GameObject.Instantiate(craftingUI);
             parts = 0;
         }
-        else craftingUI.SetActive(false);
+        
+    }
+    public void Spawn(int spawnTracker)
+    {
+        GameObject.FindGameObjectWithTag("Player").transform.position = GameObject.FindGameObjectWithTag("MainCamera").transform.position;
     }
 }
