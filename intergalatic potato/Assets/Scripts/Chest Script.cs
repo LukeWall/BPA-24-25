@@ -6,22 +6,42 @@ using UnityEngine;
 
 public class ChestScript : MonoBehaviour
 {
-    int opened = 0;
+    
     public GameObject InteractBtn;
-    // Start is called before the first frame update
-    void Start()
+    public GameObject openedChest;
+    public GameObject closedChest;
+    public GameObject text;
+    public GameObject craftingUI;
+    public Inventorymain inventory;
+    public GameObject mimic;
+    public void Start()
     {
-        opened = 0;
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventorymain>();
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.tag.Equals("Player") && opened != 1)
+        if (other.tag.Equals("Player"))
         {
-            
-            //InventoryController.instance.AddItem("Inventory", "Potato Tornado handle");
-            //opened = 1;
+            InteractBtn.SetActive(true);
         }
     }
-
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag.Equals("Player"))
+        {
+            InteractBtn.SetActive(false);
+        }
+    }
+    public void BtnClick()
+    {
+        Debug.Log("click");
+        inventory.parts += 1;
+        Instantiate(openedChest, this.transform);
+        Destroy(this.gameObject);
+        Destroy(InteractBtn);
+    }
+    public void activateMimic()
+    {
+        mimic.SetActive(true);
+    }
 }

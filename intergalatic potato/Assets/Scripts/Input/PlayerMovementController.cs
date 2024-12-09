@@ -7,9 +7,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _moveSpeed = 5f;
 
     private Vector2 _movement;
+    private Vector2 input;
 
     private Rigidbody2D _rb;
     public Animator animator;
+    private Vector2 MostRecentlyMoved;
+
+    public Transform Aim;
+    bool isWalking = false;
 
     private void Awake()
     {
@@ -25,11 +30,18 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Horizontal", _movement.x);
         animator.SetFloat("Vertical", _movement.y);
         animator.SetFloat("Speed", _movement.sqrMagnitude);
-
+        
     }
     private void FixedUpdate()
     {
         _rb.MovePosition(_rb.position + _movement * _moveSpeed * Time.fixedDeltaTime);
+        if (isWalking)
+        {
+            Vector3 vector3 = Vector3.left * input.x + Vector3.down * input.y;
+            Aim.rotation = Quaternion.LookRotation(Vector3.forward, vector3);
+        }
     }
+
+    
 
 }

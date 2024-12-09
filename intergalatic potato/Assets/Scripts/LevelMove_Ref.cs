@@ -6,9 +6,15 @@ using UnityEngine.SceneManagement;
 public class LevelMove_Ref : MonoBehaviour
 {
     public int sceneBuildIndex;
-
+    Inventorymain inventory;
+    public bool backwards;
+    public int spawnNumber = 0;
     // Level move zoned enter, if collider is a player
     // Move game to another scene
+    public void Start()
+    {
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventorymain>();
+    }
     private void OnTriggerEnter2D(Collider2D other) {
         print("Trigger Entered");
         
@@ -18,6 +24,8 @@ public class LevelMove_Ref : MonoBehaviour
             // Player entered, so move level
             print("Switching Scene to " + sceneBuildIndex);
             SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
+            inventory.Spawn(spawnNumber);
+
         }
     }
 }

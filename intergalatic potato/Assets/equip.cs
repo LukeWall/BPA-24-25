@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class equip : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class equip : MonoBehaviour
     
     public GameObject weapon;
     public GameObject weaponIcon;
-    
+    public Transform weaponHolder;
     public GameObject player;
     Inventorymain inventory;
     public GameObject craftingUI;
@@ -17,32 +18,36 @@ public class equip : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
-        inventory = player.GetComponent<Inventorymain>();
+        weaponHolder = GameObject.FindGameObjectWithTag("PlayerHand").transform;
+        player = GameObject.FindGameObjectWithTag("Player").gameObject;
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventorymain>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        player = GameObject.FindGameObjectWithTag("Player").gameObject;
         
     }
     public void collect()
     {
         if (!inventory.isFull)
         {
-            GameObject.Instantiate(weaponIcon, inventory.slot.transform, false);
-            Destroy(gameObject);
+           
+            weaponIcon.SetActive(true);
+            inventory.parts = 0;
             inventory.isFull = true;
-            GameObject.Destroy(craftingUI);
+            craftingUI.SetActive(false);
+            Debug.Log("collected");
         }
     }
     public void equipWeapon()
     {
         Debug.Log("equip weapon");
-        Transform weaponHolder = player.transform.GetChild(0).transform;
-        if (weaponHolder.transform.childCount <1)
+       
+        if (weaponHolder.childCount <1)
         {
-            GameObject.Instantiate(weapon, weaponHolder,false);
+            GameObject.Instantiate(weapon, weaponHolder,true);
         }
         else
         {
