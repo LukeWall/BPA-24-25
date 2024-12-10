@@ -18,6 +18,8 @@ TagManager:
   - slot4
   - PlayerHand
   - Enemy
+  - enemy
+  - coverUI
   layers:
   - Default
   - TransparentFX

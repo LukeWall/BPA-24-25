@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using UnityEngine.InputSystem;
+
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,6 +10,9 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 _movement;
     private Vector2 input;
+    private InputAction _clickAction;
+    private PlayerInput _playerInput;
+
 
     private Rigidbody2D _rb;
     public Animator animator;
@@ -20,12 +25,16 @@ public class PlayerController : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
     }
-
+    private void Start()
+    {
+        _playerInput = GetComponent<PlayerInput>();
+        _clickAction = _playerInput.actions["Click"];
+    }
     private void Update()
     {
         _movement.x = Input.GetAxisRaw("Horizontal");
         _movement.y = Input.GetAxisRaw("Vertical");
-
+        
 
         animator.SetFloat("Horizontal", _movement.x);
         animator.SetFloat("Vertical", _movement.y);
