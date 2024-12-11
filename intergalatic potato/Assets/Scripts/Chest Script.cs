@@ -41,7 +41,7 @@ public class ChestScript : MonoBehaviour
         Destroy(InteractBtn);
     }
     public void activateMimic()
-    {
+    {                           
         mimic.SetActive(true);
     }
 }
