@@ -4,35 +4,37 @@ using UnityEngine;
 
 public class TridentAttack : MonoBehaviour
 {
+    private GameObject weapon;
+    public bool Attacking = false;
     [SerializeField] private Animator anim;
     [SerializeField] private float meleeSpeed;
     [SerializeField] private float Damage;
+    private Animation anim1;
     public Input Input;
+    public void Start()
+    {
+        Attacking = false;
+        weapon = GameObject.FindGameObjectWithTag("weapon");
+        anim1 = GameObject.FindGameObjectWithTag("weapon").GetComponent<Animation>();
+    }
    
-    float timeUntilMelee;
-    bool isAttacking;
+
     private void Update()
     {
-        if(timeUntilMelee <= 0f)
+        
+        //while(anim1.isPlaying == false)
+        //{
+        //    Attacking = false;
+        //    Debug.Log("noAnimate");
+        //}
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                if(isAttacking == true)
-                {
-                    anim.SetTrigger("TridentAttack");
-                    isAttacking = false;
-                }
-                Debug.Log("attack");
-                
-                timeUntilMelee = meleeSpeed;
-            }
+            Debug.Log("spacebar");
+            anim1.Play("TridentAttack", PlayMode.StopSameLayer);
+            Debug.Log("spacebar");
         }
-        else
-        {
-            timeUntilMelee -= Time.deltaTime;
-        }
+        Attacking = false;
     }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Enemy")

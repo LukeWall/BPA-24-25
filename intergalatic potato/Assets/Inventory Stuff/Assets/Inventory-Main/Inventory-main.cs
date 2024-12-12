@@ -23,7 +23,7 @@ public class Inventorymain : MonoBehaviour
     {
         if (parts == 4)
         {
-            GameObject.Instantiate(craftingUI);
+            craftingUI.SetActive(craftingUI);
             parts = 0;
         }
         
