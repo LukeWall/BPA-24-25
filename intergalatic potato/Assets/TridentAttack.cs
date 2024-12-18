@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class TridentAttack : MonoBehaviour
 {
+    private HealthManager enemyHealthManager;
     private GameObject weapon;
     public bool Attacking = false;
-    [SerializeField] private Animator anim;
+    [SerializeField] private Animation anim;
     [SerializeField] private float meleeSpeed;
     [SerializeField] private float Damage;
-    private Animation anim1;
+    public Animation anim1;
     public Input Input;
+    private EnemySpawner enemy;
     public void Start()
     {
         Attacking = false;
@@ -37,9 +39,12 @@ public class TridentAttack : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Enemy")
+        if (other.tag == "enemy")
         {
             Debug.Log("Enemy hit");
+            enemy = other.GetComponent<EnemySpawner>();
+            enemyHealthManager = other.GetComponent<HealthManager>();
+            enemyHealthManager.HurtPlayer(10);
         }
     }
 

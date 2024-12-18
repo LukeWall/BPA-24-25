@@ -46,7 +46,7 @@ public class equip : MonoBehaviour
     {
         Debug.Log("equip weapon");
         weaponHolder = GameObject.FindGameObjectWithTag("PlayerHand").transform;
-        if (weaponHolder.childCount >1)
+        if (weaponHolder.childCount<1)
         {
             GameObject.Instantiate(weapon, weaponHolder,false);
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class HealthManager : MonoBehaviour
 {
 
-    public int Health;
+    [HideInInspector] public float Health = 100;
     public int MaxHealth;
 
     // Start is called before the first frame update
@@ -20,8 +20,9 @@ public class HealthManager : MonoBehaviour
         
     }
 
-    public void HurtPlayer(int damaged)
+    public void HurtPlayer(float damaged)
     {
-        Health -= damaged;
+        Health = Health -= damaged;
+        Debug.Log(Health);
     }
 }

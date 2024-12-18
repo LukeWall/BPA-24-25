@@ -17,7 +17,8 @@ public class EnemySpawner : MonoBehaviour
     public float bulletForce;
     GameObject Bullet;
     Rigidbody2D rb;
-
+    public float StartHP;
+    public float currentHP;
 
 
     // Start is called before the first frame update
