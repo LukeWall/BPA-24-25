@@ -32,6 +32,7 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+         player = GameObject.FindGameObjectWithTag("Player");
         moving = true;
         var distance = Vector2.Distance(transform.position, player.transform.position);// no need to perform this operation twice.
         if (distance <  15 && distance > 8)
