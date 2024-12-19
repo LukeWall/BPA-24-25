@@ -9,11 +9,9 @@ public class SquidAttack : MonoBehaviour
     public bool moving;
     public float nextFire;
     public float speed;
-
+    public GameObject idle;
     void Start()
     {
-    
-
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -22,24 +20,35 @@ public class SquidAttack : MonoBehaviour
     {
         Vector2 direction = player.transform.position - attacker.transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-        transform.rotation = Quaternion.Euler(Vector3.forward * angle);
-
         var distance = Vector2.Distance(attacker.transform.position, player.transform.position);// no need to perform this operation twice.
         if (distance < 40 && distance > 10)
         {
             direction = player.transform.position - attacker.transform.position;
             direction.Normalize();
-           
-            transform.rotation = Quaternion.Lerp(transform.rotation, player.transform.rotation, Time.deltaTime*10);
-            transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+
+            Vector3 vectorToTarget = player.transform.position - attacker.transform.position;
+            float z = Mathf.Atan2((player.transform.position.y - attacker.transform.position.y), (player.transform.position.x - attacker.transform.position.x)) * Mathf.Rad2Deg - 90;
+            Quaternion q = Quaternion.AngleAxis(z, attacker.transform.forward);
+            attacker.transform.rotation = Quaternion.Slerp(attacker.transform.rotation, q, Time.deltaTime * 20);
+
+            attacker.transform.position = Vector2.MoveTowards(attacker.transform.position, player.transform.position, speed * Time.deltaTime);
             
 
         }
         else
         {
-            
-            if (nextFire <= 0 && distance<10)
+            if (distance < 10)
+            {
+                Vector3 vectorToTarget = player.transform.position - attacker.transform.position;
+                float z = Mathf.Atan2((player.transform.position.y - attacker.transform.position.y), (player.transform.position.x - attacker.transform.position.x)) * Mathf.Rad2Deg - 90;
+                Quaternion q = Quaternion.AngleAxis(z, attacker.transform.forward);
+                attacker.transform.rotation = Quaternion.Slerp(attacker.transform.rotation, q, Time.deltaTime * 20);
+            }
+            if (distance > 40)
+            {
+                attacker.transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            if (nextFire <= 0 && distance<15)
             {
 
                 Shoot();

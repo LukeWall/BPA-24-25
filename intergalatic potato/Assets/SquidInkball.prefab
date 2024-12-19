@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletDamage: 0
   rb: {fileID: 2624687356420753755}
-  bulletForce: 10
+  bulletForce: 20
   fired: 0
 --- !u!50 &2624687356420753755
 Rigidbody2D:
