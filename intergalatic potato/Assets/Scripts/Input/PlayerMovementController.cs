@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     public Transform Aim;
     bool isWalking = false;
-
+    bool isAttacking = false;
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();

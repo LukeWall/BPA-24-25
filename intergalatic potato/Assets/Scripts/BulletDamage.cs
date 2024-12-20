@@ -6,19 +6,32 @@ public class BulletDamage : MonoBehaviour
 {
     public int bulletDamage;
     private EnemyController enemyController;
+    public Rigidbody2D rb;
+    public float bulletForce = 40f;
+    public bool fired = false;
+    public void Start()
+    {
+        fired = true;
+    }
+    public void Update()
+    {
+        fired = true;
+        if (fired == true)
+        {
 
-    //public void Start()
-    //{
-    //    enemyController = GetComponent<EnemyController>();
-    //}
-    //public void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    if (other.gameObject.tag == "Player")
-    //    {
-    //        other.gameObject.GetComponent<Player>().damagePlayer(bulletDamage);
-    //        Destroy(gameObject);
-    //    }
-    //}
-  
+            transform.position += transform.forward * Time.deltaTime * bulletForce;
+            GetComponent<Rigidbody2D>().velocity = transform.right * bulletForce;
+        }
+
+    }
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "Player")
+        {
+            Debug.Log("PlayerHit");
+            Destroy(this.gameObject);
+        }
+    }
+
 }
 

@@ -23,6 +23,7 @@ public class ChestScript : MonoBehaviour
         if (other.tag.Equals("Player"))
         {
             InteractBtn.SetActive(true);
+           
         }
     }
     private void OnTriggerExit2D(Collider2D other)
@@ -36,12 +37,13 @@ public class ChestScript : MonoBehaviour
     {
         Debug.Log("click");
         inventory.parts += 1;
-        Instantiate(openedChest, this.transform);
+        Instantiate(openedChest, this.transform, true);
         Destroy(this.gameObject);
         Destroy(InteractBtn);
     }
     public void activateMimic()
     {
+        GameObject.Instantiate(openedChest, InteractBtn.transform);
         mimic.SetActive(true);
     }
 }

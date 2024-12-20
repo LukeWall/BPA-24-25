@@ -14,6 +14,7 @@ public class equip : MonoBehaviour
     public GameObject player;
     Inventorymain inventory;
     public GameObject craftingUI;
+    int unlocked = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -45,9 +46,10 @@ public class equip : MonoBehaviour
     {
         Debug.Log("equip weapon");
         weaponHolder = GameObject.FindGameObjectWithTag("PlayerHand").transform;
-        if (weaponHolder.childCount <1)
+        if (weaponHolder.childCount<1)
         {
-            GameObject.Instantiate(weapon, weaponHolder,true);
+            GameObject.Instantiate(weapon, weaponHolder,false);
+
         }
         else
         {
