@@ -315,6 +315,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 100
   MaxHealth: 100
+--- !u!114 &215600223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215600210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52a3ce9e6c10a7a4ba08bafbf366a1f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Attacking: 0
+  anim: {fileID: 0}
+  meleeSpeed: 0
+  Damage: 0
+  anim1: {fileID: 0}
 --- !u!1 &250177107
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,6 +692,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1810508893463018714, guid: 1d943d8b0b4f55043b0b752d4f40c6ac, type: 3}
       insertIndex: -1
       addedObject: {fileID: 215600222}
+    - targetCorrespondingSourceObject: {fileID: 1810508893463018714, guid: 1d943d8b0b4f55043b0b752d4f40c6ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 215600223}
   m_SourcePrefab: {fileID: 100100000, guid: 1d943d8b0b4f55043b0b752d4f40c6ac, type: 3}
 --- !u!1 &760937950
 GameObject:
