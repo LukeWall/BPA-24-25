@@ -30,7 +30,6 @@ public class BulletDamage : MonoBehaviour
         {
             Debug.Log("PlayerHit");
             Destroy(this.gameObject);
-            other.GetComponent<HealthManager>().HurtPlayer(bulletDamage);
         }
     }
 
