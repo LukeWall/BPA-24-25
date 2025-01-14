@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c21305f00bd8d8e49a9b565081b77386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletDamage: 0
+  bulletDamage: 10
   rb: {fileID: 2624687356420753755}
   bulletForce: 20
   fired: 0
