@@ -61,18 +61,18 @@ public class HealthUI : MonoBehaviour
             else if (this.GetComponent<HealthManager>().Health >= 20 && this.GetComponent<HealthManager>().Health < 30)
             {
             Destroy(newHealth);
-            newHealth = Instantiate(healthbarSprites[7], this.transform, false);
+            newHealth = Instantiate(healthbarSprites[7], healthBar.transform, false);
             }
             else if (this.GetComponent<HealthManager>().Health > 10 && this.GetComponent<HealthManager>().Health < 20)
             {
             Destroy(newHealth);
-            newHealth = Instantiate(healthbarSprites[8], this.transform, false);
+            newHealth = Instantiate(healthbarSprites[8], healthBar.transform, false);
             }
             else if (this.GetComponent<HealthManager>().Health <= 0)
             {
             Destroy(enemy);
             Destroy(this);
-            newHealth = Instantiate(healthbarSprites[9], this.transform, false);
+            newHealth = Instantiate(healthbarSprites[9], healthBar.transform, false);
             }
 
         }
