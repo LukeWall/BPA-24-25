@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class ChestScript : MonoBehaviour
+public class LeverScript : MonoBehaviour
 {
     
     public GameObject InteractBtn;
-    public GameObject openedChest;
-    public GameObject closedChest;
+    public GameObject openedLever;
+    public GameObject closedLever;
     public GameObject text;
     public GameObject craftingUI;
     public Inventorymain inventory;
@@ -37,13 +37,13 @@ public class ChestScript : MonoBehaviour
     {
         Debug.Log("click");
         inventory.parts += 1;
-        Instantiate(openedChest, this.transform, true);
+        Instantiate(openedLever, this.transform, true);
         Destroy(this.gameObject);
         Destroy(InteractBtn);
     }
     public void activateMimic()
     {
-        GameObject.Instantiate(openedChest, InteractBtn.transform);
+        GameObject.Instantiate(openedLever, InteractBtn.transform);
         mimic.SetActive(true);
     }
 }

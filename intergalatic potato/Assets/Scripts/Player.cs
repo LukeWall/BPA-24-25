@@ -28,7 +28,7 @@ using UnityEngine;
 //    public GameObject Interactbtn;
 //    //public void OnTriggerEnter2D(Collider2D collision)
 //    //{
-//    //    if (collision.gameObject.tag == "chest")
+//    //    if (collision.gameObject.tag == "")
 //    //    {
 //    //        //show interact button
 //    //       Instantiate(Interactbtn, collision.transform);
