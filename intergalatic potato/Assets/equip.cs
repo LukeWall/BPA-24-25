@@ -40,6 +40,7 @@ public class equip : MonoBehaviour
             inventory.isFull = true;
             craftingUI.SetActive(false);
             Debug.Log("collected");
+            SceneManager.LoadScene(4, LoadSceneMode.Single);
         }
     }
     public void equipWeapon()
