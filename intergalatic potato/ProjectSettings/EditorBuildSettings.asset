@@ -23,5 +23,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Atlantis Scenes/Puzzles/SeaTree.unity
     guid: 0e7f05c6ee4bd7d4aa9ebbeb64451f6d
+  - enabled: 1
+    path: Assets/Scenes/Atlantis Scenes/Puzzles/Puzzle Tutorial.unity
+    guid: ef0d2369e4b7d384794c2d02e74e92a4
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 4b10ed71f6d7c374da5de580b35e8bab, type: 2}

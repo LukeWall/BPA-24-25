@@ -25922,7 +25922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dfe438d44fd5b1428a0260571371232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIndex: 0
+  sceneBuildIndex: 6
   backwards: 0
   spawnNumber: 0
 --- !u!61 &1272784406
