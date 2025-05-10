@@ -83774,8 +83774,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractBtn: {fileID: 5510034777170596985}
-  openedChest: {fileID: 318908970}
-  closedChest: {fileID: 4920162318954253477}
+  openedLever: {fileID: 0}
+  closedLever: {fileID: 0}
   text: {fileID: 0}
   craftingUI: {fileID: 960778630}
   inventory: {fileID: 0}
@@ -84760,8 +84760,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractBtn: {fileID: 0}
-  openedChest: {fileID: 8240182128206314082, guid: de33a7905909fdf478518ac3e6a964bd, type: 3}
-  closedChest: {fileID: 3818211685832072590}
+  openedLever: {fileID: 0}
+  closedLever: {fileID: 0}
   text: {fileID: 0}
   craftingUI: {fileID: 0}
   inventory: {fileID: 0}
@@ -84779,8 +84779,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractBtn: {fileID: 4381296191322759623}
-  openedChest: {fileID: 8240182128206314082, guid: de33a7905909fdf478518ac3e6a964bd, type: 3}
-  closedChest: {fileID: 3818211685648972059}
+  openedLever: {fileID: 0}
+  closedLever: {fileID: 0}
   text: {fileID: 0}
   craftingUI: {fileID: 0}
   inventory: {fileID: 0}
@@ -84798,8 +84798,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractBtn: {fileID: 4381296191696210176}
-  openedChest: {fileID: 8240182128206314082, guid: de33a7905909fdf478518ac3e6a964bd, type: 3}
-  closedChest: {fileID: 3818211686080942556}
+  openedLever: {fileID: 0}
+  closedLever: {fileID: 0}
   text: {fileID: 0}
   craftingUI: {fileID: 0}
   inventory: {fileID: 0}
@@ -84817,8 +84817,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractBtn: {fileID: 4381296190992298390}
-  openedChest: {fileID: 8240182128206314082, guid: de33a7905909fdf478518ac3e6a964bd, type: 3}
-  closedChest: {fileID: 3818211684235127114}
+  openedLever: {fileID: 0}
+  closedLever: {fileID: 0}
   text: {fileID: 0}
   craftingUI: {fileID: 0}
   inventory: {fileID: 0}
@@ -85526,9 +85526,9 @@ SceneRoots:
   - {fileID: 1185604208}
   - {fileID: 967925078}
   - {fileID: 1323893859}
-  - {fileID: 501283708}
   - {fileID: 760937952}
   - {fileID: 364043512716422893}
+  - {fileID: 501283708}
   - {fileID: 931866281}
   - {fileID: 6221784576517626155}
   - {fileID: 2124059607}

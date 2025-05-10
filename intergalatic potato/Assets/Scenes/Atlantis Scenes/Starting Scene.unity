@@ -137,7 +137,6 @@ GameObject:
   - component: {fileID: 118505086}
   - component: {fileID: 118505085}
   - component: {fileID: 118505090}
-  - component: {fileID: 118505091}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -307,18 +306,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 34272e355a67d1f498b2366d20edbb43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &118505091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 118505084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b8c334667763af4d87072e7b4dcba51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &214060343
@@ -26001,7 +25988,6 @@ GameObject:
   - component: {fileID: 1540381676}
   - component: {fileID: 1540381675}
   - component: {fileID: 1540381677}
-  - component: {fileID: 1540381678}
   m_Layer: 0
   m_Name: Topdown Camera (1)
   m_TagString: MainCamera
@@ -26074,18 +26060,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 34272e355a67d1f498b2366d20edbb43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1540381678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1540381674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b8c334667763af4d87072e7b4dcba51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2037239746
